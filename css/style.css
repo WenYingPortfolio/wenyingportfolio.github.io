@@ -5,6 +5,9 @@
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
+  --light-cyan: #E0F7FF;
+  --bright-cyan: #00CCFF;
+  --dark-cyan: #009FCC;
 
   --font-size: 17px;
   --mobile-font-size: 16px;
@@ -249,11 +252,11 @@ a:hover {
 }
 
 .pub-wrapper .link a {
-  color: black;
+  color: var(--dark-cyan);
 }
 
 .pub-wrapper .link a:hover {
-  color: black;
+  color: var(--bright-cyan);
 }
 
 .pub-wrapper .authors {
