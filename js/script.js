@@ -9,8 +9,7 @@ moreContent.addEventListener("shown.bs.collapse", function() {
 
 var counter = 0;
 var hoverImages = [
-  "assets/profile/cuda.webp",
-  "assets/profile/mcflurry.webp",
+  "assets/profile/drunkcat.webp",
 ];
 
 var profile_credit = document.getElementById("profile-credit");
@@ -22,7 +21,7 @@ function profile_enter() {
 }
 
 function profile_leave() {
-  profile.src = "assets/profile/myself.webp";
+  profile.src = "assets/profile/Wen.webp";
 }
 
 profile_credit.addEventListener("mouseenter", profile_enter);

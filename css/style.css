@@ -1,18 +1,18 @@
 :root {
 
-  --cardinal: #750014;
+  --cardinal: #9e3001;
   --very-light-orange: #fdf3ea;
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
 
-  --font-size: 14px;
+  --font-size: 17px;
   --mobile-font-size: 16px;
 
   --line-height: 24px;
   --mobile-line-height: 26px;
 
-  --section-title-font-size: 20px;
+  --section-title-font-size: 24px;
   --mobile-section-title-font-size: 22px;
 
   --name-font-size: 32px;
@@ -53,7 +53,7 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width: 768px;
+  max-width: 960px;
 }
 
 body .row {
@@ -79,6 +79,12 @@ a:hover {
 }
 
 .highlight {
+  /* color: var(--cardinal); */
+  color: orange;
+  font-weight: bold;
+}
+
+.highlight-note {
   color: var(--cardinal);
   font-weight: bold;
 }
@@ -116,6 +122,7 @@ a:hover {
 .representative {
   background-color: var(--very-light-orange);
   border-radius: 2px;
+  border-radius: 15px;
 }
 
 @media (max-width: 767.98px) {
@@ -147,8 +154,9 @@ a:hover {
 
 .home-wrapper .picture img {
   width: 100%;
-  max-width: 200px;
+  max-width: 250px;
   margin-right: 20px;
+  border-radius: 10px;
 }
 
 .home-wrapper .description {
@@ -256,13 +264,15 @@ a:hover {
 }
 
 .pub-wrapper .authors me {
-  color: var(--dark-gray);
+  /* color: var(--dark-gray); */
+  color: black;
   font-weight: bold;
 }
 
 .pub-wrapper .figure img {
-  max-width: 240px;
+  max-width: 300px;
   width: 100%;
+  border-radius: 10px; /* Add rounded corners */
 }
 
 @media (max-width: 767.98px) {
