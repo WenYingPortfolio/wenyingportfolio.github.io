@@ -5,6 +5,7 @@
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
+  --super-dark-gray: #6e6c6c;
   --light-cyan: #E0F7FF;
   --bright-cyan: #00CCFF;
   --dark-cyan: #009FCC;
@@ -269,7 +270,8 @@ a:hover {
 
 .pub-wrapper .authors me {
   /* color: var(--dark-gray); */
-  color: black;
+  /* color: black; */
+  color: var(--super-dark-gray);
   font-weight: bold;
 }
 
