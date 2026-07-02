@@ -1,9 +1,11 @@
 // More content
 
 var moreContent = document.getElementById("more-content");
-moreContent.addEventListener("shown.bs.collapse", function() {
-  this.scrollIntoView();
-});
+if (moreContent) {
+  moreContent.addEventListener("shown.bs.collapse", function() {
+    this.scrollIntoView();
+  });
+}
 
 // Profile
 
@@ -24,14 +26,19 @@ function profile_leave() {
   profile.src = "assets/profile/Wen.webp";
 }
 
-profile_credit.addEventListener("mouseenter", profile_enter);
-profile_credit.addEventListener("mouseleave", profile_leave);
-profile_leave();
+if (profile_credit && profile) {
+  profile_credit.addEventListener("mouseenter", profile_enter);
+  profile_credit.addEventListener("mouseleave", profile_leave);
+  profile_leave();
+}
 
 // Footer year
 
 var d = new Date();
-document.getElementById('year').innerHTML = d.getFullYear();
+var year = document.getElementById('year');
+if (year) {
+  year.innerHTML = d.getFullYear();
+}
 
 // Clipboard
 
