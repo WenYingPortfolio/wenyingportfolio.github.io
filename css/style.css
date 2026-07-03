@@ -589,8 +589,13 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.project-page .project-lead {
+  color: var(--cardinal);
+}
+
 .project-page .project-tracing-col .project-figure + .project-figure,
 .project-page .project-tracing-col .project-figure + .project-copy,
+.project-page .project-tracing-col .project-copy + .project-figure,
 .project-page .project-tracing-col .project-caption + .project-figure {
   margin-top: 16px;
 }
