@@ -103,7 +103,7 @@ a:hover {
 }
 
 .section-title {
-  font-weight: normal;
+  font-weight: bold;
   font-size: var(--section-title-font-size);
   line-height: var(--line-height);
   display: inline-block;
@@ -197,6 +197,20 @@ a:hover {
 .bio-wrapper .name-icon {
   margin-left: -3px;
   margin-right: -3px;
+}
+
+.bio-wrapper .org-icon,
+.exp-wrapper .exp-icon {
+  width: auto;
+  height: 0.95em;
+  max-width: 1.1em;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.bio-wrapper .org-icon {
+  vertical-align: -0.12em;
+  margin-right: 3px;
 }
 
 /*------------------
@@ -357,6 +371,12 @@ a:hover {
   color: var(--dark-gray);
 }
 
+.exp-wrapper .title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 @media (max-width: 767.98px) {
   .exp-wrapper .time {
     text-align: left;
@@ -398,6 +418,22 @@ a:hover {
   margin-bottom: 18px;
 }
 
+.project-page main > .sec-wrapper {
+  margin-top: 56px;
+}
+
+.project-page main > .sec-wrapper:first-child {
+  margin-top: 28px;
+}
+
+.project-page .section-head {
+  margin-top: 0;
+}
+
+.project-page #result-highlights .section-head:not(:first-child) {
+  margin-top: 40px;
+}
+
 .project-page .project-venue {
   color: var(--cardinal);
   font-weight: bold;
@@ -426,7 +462,9 @@ a:hover {
 }
 
 .project-page .project-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 4px 5px;
   padding: 7px 15px;
   color: white;
@@ -509,6 +547,12 @@ a:hover {
   line-height: 22px;
 }
 
+.project-page .project-task-row {
+  display: grid;
+  grid-template-columns: 3fr 3fr 4fr;
+  gap: 0;
+}
+
 .project-page .project-metric {
   height: 100%;
   padding: 18px;
@@ -516,17 +560,66 @@ a:hover {
   background-color: var(--very-light-orange);
 }
 
-.project-page .project-metric-value {
+.project-page .project-metric-value,
+.project-page .project-stat {
   color: var(--cardinal);
+  font-weight: bold;
+}
+
+.project-page .project-metric-value {
   font-size: 34px;
   line-height: 40px;
+}
+
+.project-page .project-highlights-title {
+  color: var(--cardinal);
+  font-size: 36px;
+  line-height: 42px;
   font-weight: bold;
+}
+
+.project-page .project-subsection-title {
+  font-size: 20px;
+  line-height: var(--line-height);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.project-page .project-tracing-col .project-copy {
+  margin-bottom: 16px;
+}
+
+.project-page .project-tracing-col .project-figure + .project-figure,
+.project-page .project-tracing-col .project-figure + .project-copy,
+.project-page .project-tracing-col .project-caption + .project-figure {
+  margin-top: 16px;
+}
+
+.project-page #citation .section-head .col-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-page #citation a[data-bs-toggle="collapse"] {
+  color: var(--dark-cyan);
+  font-size: var(--font-size);
+}
+
+.project-page #citation a[data-bs-toggle="collapse"]:hover {
+  color: var(--bright-cyan);
 }
 
 @media (max-width: 767.98px) {
   .project-page h1 {
     font-size: 29px;
     line-height: 37px;
+  }
+
+  .project-page .project-highlights-title {
+    font-size: 30px;
+    line-height: 36px;
   }
 
   .project-page .project-authors {
@@ -536,5 +629,9 @@ a:hover {
   .project-page .project-card,
   .project-page .project-metric {
     margin-bottom: 14px;
+  }
+
+  .project-page .project-task-row {
+    grid-template-columns: 1fr;
   }
 }

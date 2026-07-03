@@ -7,6 +7,20 @@ if (moreContent) {
   });
 }
 
+var projectBibtexTrigger = document.getElementById("project-bibtex-trigger");
+var projectBibtex = document.getElementById("project-bibtex");
+if (projectBibtexTrigger && projectBibtex) {
+  projectBibtexTrigger.addEventListener("click", function() {
+    bootstrap.Collapse.getOrCreateInstance(projectBibtex).show();
+  });
+  projectBibtex.addEventListener("shown.bs.collapse", function() {
+    var citation = document.getElementById("citation");
+    if (citation) {
+      citation.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+}
+
 // Profile
 
 var counter = 0;

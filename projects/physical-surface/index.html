@@ -29,7 +29,7 @@
     <header class="project-hero sec-wrapper">
       <div class="row justify-content-center">
         <div class="col col-wrapper text-center">
-          <div class="project-venue">International Journal of Human-Computer Studies, 2026</div>
+          <div class="project-venue"><a href="https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies">International Journal of Human-Computer Studies</a>, 2026</div>
           <h1>Physical Surfaces Make Touch Interactions in Virtual Reality Precise, Efficient, and Bimanual</h1>
           <div class="project-authors">
             <a href="../../">Wen Ying</a>
@@ -38,10 +38,10 @@
           </div>
           <div class="project-affiliation">University of Virginia</div>
           <div class="project-links">
-            <a class="project-button" href="../../assets/PhysicalSurface/PhysicalSurface-arXiv.pdf">Paper</a>
-            <a class="project-button" href="https://youtu.be/e_nzOkZIIKA">Video</a>
-            <a class="project-button" href="https://www.sciencedirect.com/science/article/pii/S1071581926001254">Publisher</a>
-            <a class="project-button" data-bs-toggle="collapse" href="#project-bibtex" onclick="return false">BibTeX</a>
+            <a class="project-button" href="../../assets/PhysicalSurface/PhysicalSurface-arXiv.pdf"><i class="bi bi-file-earmark-pdf"></i>Paper</a>
+            <a class="project-button" href="https://youtu.be/e_nzOkZIIKA"><i class="bi bi-play-btn"></i>Video</a>
+            <a class="project-button" href="#result-highlights"><i class="bi bi-bar-chart-line"></i>Results</a>
+            <a class="project-button" href="#citation" id="project-bibtex-trigger"><i class="bi bi-blockquote-left"></i>Citation</a>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
               Virtual reality systems can enable convenient hand-based interactions across diverse work scenarios. However, mid-air gestures lack tactile feedback and a physical reference surface to support the hand, which can make precise and efficient touch interaction difficult.
             </p>
             <p>
-              This paper investigates how hand-grounded haptic feedback affects VR tasks that demand high precision, including selecting, tracing, and sketching. We compare three feedback levels: no haptic feedback, tactile feedback through vibrotactile and pressure cues, and interaction with a portable physical surface.
+              This paper investigates how hand-grounded haptic feedback affects VR tasks that demand high precision, including selecting, tracing, and sketching. We <b>compare</b> three feedback levels: <b>no haptic feedback</b>, <b>tactile feedback</b> through vibrotactile and pressure cues, and interaction with a portable  <b>physical surface</b>.
             </p>
             <p>
               Portable physical surfaces enabled the best selection precision, tracing efficiency, and sketch quality. Participants also used both hands more actively when engaging with a physical surface, matching their preference for the added confidence and control.
@@ -96,7 +96,7 @@
       <section class="sec-wrapper">
         <div class="row section-head">
           <div class="col col-wrapper">
-            <h2 class="section-title">Study Overview</h2>
+            <h2 class="section-title">System Overview</h2>
           </div>
         </div>
         <div class="row section-item">
@@ -105,11 +105,22 @@
             <p class="project-caption">The system tracks the hand, handheld surface, and touch dynamics to render precise touch input in VR.</p>
           </div>
         </div>
-        <div class="row section-item align-items-center">
-          <div class="col-md-6 col-wrapper">
-            <img class="project-figure" src="../../assets/PhysicalSurface/exp_setup.png" alt="Experimental setup and three haptic feedback conditions">
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Study Overview</h2>
           </div>
-          <div class="col-md-6 col-wrapper project-copy">
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <img class="project-figure" src="../../assets/PhysicalSurface/exp_setup.png" alt="Experimental setup and three haptic feedback conditions">
+            <p class="project-caption">Experimental setup and three haptic feedback conditions: no haptic feedback, tactile feedback, and physical surface.</p>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
             <p>
               We studied three haptic feedback conditions for touch interaction on a virtual surface:
             </p>
@@ -123,22 +134,22 @@
             </p>
           </div>
         </div>
-        <div class="row section-item">
-          <div class="col-md-4 col-wrapper">
+        <div class="row section-item project-task-row">
+          <div class="col-wrapper project-task-col">
             <div class="project-card">
               <img src="../../assets/PhysicalSurface/selection.png" alt="Selection task screenshots">
               <h3>Selecting</h3>
               <p>Fitts' law tasks with small and large targets tested precise discrete touch input.</p>
             </div>
           </div>
-          <div class="col-md-4 col-wrapper">
+          <div class="col-wrapper project-task-col">
             <div class="project-card">
               <img src="../../assets/PhysicalSurface/tracing.png" alt="Tracing task screenshots">
               <h3>Tracing</h3>
               <p>Triangle and circle tracing tested continuous touch control and stroke quality.</p>
             </div>
           </div>
-          <div class="col-md-4 col-wrapper">
+          <div class="col-wrapper project-task-col">
             <div class="project-card">
               <img src="../../assets/PhysicalSurface/sketching.png" alt="Sketching task screenshots">
               <h3>Sketching</h3>
@@ -148,23 +159,23 @@
         </div>
       </section>
 
-      <section class="sec-wrapper">
+      <section class="sec-wrapper" id="result-highlights">
         <div class="row section-head">
           <div class="col col-wrapper">
-            <h2 class="section-title">Results Highlights</h2>
+            <h2 class="section-title project-highlights-title">Result Highlights</h2>
           </div>
         </div>
         <div class="row section-item">
           <div class="col-md-4 col-wrapper">
             <div class="project-metric">
               <div class="project-metric-value">51.2%</div>
-              <div>better selection accuracy than tactile feedback.</div>
+              <div>Physical surfaces improved selection accuracy over tactile feedback.</div>
             </div>
           </div>
           <div class="col-md-4 col-wrapper">
             <div class="project-metric">
               <div class="project-metric-value">86.8%</div>
-              <div>higher tracing continuity than tactile feedback.</div>
+              <div>Physical surfaces enabled higher tracing continuity than tactile feedback.</div>
             </div>
           </div>
           <div class="col-md-4 col-wrapper">
@@ -174,25 +185,59 @@
             </div>
           </div>
         </div>
+
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h3 class="project-subsection-title">Selection</h3>
+          </div>
+        </div>
         <div class="row section-item align-items-center">
           <div class="col-md-6 col-wrapper">
-            <img class="project-figure" src="../../assets/PhysicalSurface/tracing_MPD_MFD_v2.png" alt="Tracing precision and smoothness results">
+            <img class="project-figure" src="../../assets/PhysicalSurface/select_error_TP_v2.png" alt="Selection errors and throughput under the three haptic conditions">
           </div>
           <div class="col-md-6 col-wrapper project-copy">
             <p>
-              Compared with tactile feedback, the physical surface improved tracing precision by 20.3%, continuity by 86.8%, and speed by 18.3%. The physical surface also improved sketch smoothness by 21.6%, stroke continuity by 21.2%, and sketch clarity by 17.5%.
+              Physical surfaces improved selection accuracy by <span class="project-stat">51.2%</span> compared with tactile feedback, reducing selection errors by about half while maintaining comparable throughput.
             </p>
-            <p>
+          </div>
+        </div>
+
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h3 class="project-subsection-title">Tracing</h3>
+          </div>
+        </div>
+        <div class="row section-item align-items-start">
+          <div class="col-md-6 col-wrapper project-tracing-col">
+            <p class="project-copy">
+              Compared with tactile feedback, physical surfaces improved tracing precision by <span class="project-stat">20.3%</span>, continuity by <span class="project-stat">86.8%</span>, and speed by <span class="project-stat">18.3%</span>.
+            </p>
+            <img class="project-figure" src="../../assets/PhysicalSurface/tracing_MPD_MFD_v2.png" alt="Tracing precision and smoothness results">
+            <img class="project-figure" src="../../assets/PhysicalSurface/trace_breakpoint_CT_v2.png" alt="Tracing continuity and completion time results">
+          </div>
+          <div class="col-md-6 col-wrapper project-tracing-col">
+            <p class="project-copy">
               These benefits were strongest for continuous tasks, where the surface helped users maintain stable contact while moving along the virtual surface.
+            </p>
+            <img class="project-figure" src="../../assets/PhysicalSurface/tracing_trends.png" alt="Tracing stroke collections from all participants">
+          </div>
+        </div>
+
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h3 class="project-subsection-title">Sketching</h3>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              Physical surfaces also improved sketch smoothness by <span class="project-stat">21.6%</span>, stroke continuity by <span class="project-stat">21.2%</span>, and sketch clarity by <span class="project-stat">17.5%</span> compared with tactile feedback. External reviewers ranked physical-surface sketches best overall <span class="project-stat">90%</span> of the time.
             </p>
           </div>
         </div>
         <div class="row section-item">
-          <div class="col-md-6 col-wrapper">
-            <img class="project-figure" src="../../assets/PhysicalSurface/trace_breakpoint_CT_v2.png" alt="Tracing continuity and completion time results">
-          </div>
-          <div class="col-md-6 col-wrapper">
-            <img class="project-figure" src="../../assets/PhysicalSurface/sketching_collection.png" alt="Collection of sketches from the three haptic conditions">
+          <div class="col col-wrapper">
+            <img class="project-figure" src="../../assets/PhysicalSurface/sketching_collection.png" alt="Sketching collections from the three haptic conditions">
           </div>
         </div>
       </section>
@@ -206,27 +251,29 @@
         <div class="row section-item align-items-center">
           <div class="col-md-6 col-wrapper project-copy">
             <p>
-              Physical surfaces changed how participants used their hands. Participants hovered the dominant finger farther from the surface before contact, moved the dominant hand less during continuous tasks, and moved the non-dominant hand more to adjust the surface.
+              To understand why physical surfaces brought these benefits, we looked at how participants used their hands. They hovered the dominant finger farther from the surface before contact, moved the dominant hand less during continuous tasks, and moved the non-dominant hand more to adjust the surface.
             </p>
             <p>
               This suggests that a tangible surface can help both hands share the workload, giving users a more familiar reference frame for precise VR input.
             </p>
           </div>
-          <div class="col-md-6 col-wrapper">
+          <div class="col-md-6 col-wrapper project-tracing-col">
+            <img class="project-figure" src="../../assets/PhysicalSurface/trace_finger_surface_dis.png" alt="Dominant hand trajectory along the surface normal before contact during tracing">
             <img class="project-figure" src="../../assets/PhysicalSurface/trace_hand_surface_move_fig_v2.png" alt="Dominant and non-dominant hand movement during tracing">
           </div>
         </div>
       </section>
 
-      <section class="sec-wrapper">
+      <section class="sec-wrapper" id="citation">
         <div class="row section-head">
           <div class="col col-wrapper">
             <h2 class="section-title">Citation</h2>
+            <a data-bs-toggle="collapse" href="#project-bibtex" onclick="return false">BibTeX</a>
           </div>
         </div>
         <div class="row section-item">
           <div class="col col-wrapper">
-            <div class="collapse show" id="project-bibtex">
+            <div class="collapse" id="project-bibtex">
               <pre class="snippet"><code>@article{YING2026103850,
   title = {Physical surfaces make touch interactions in virtual reality precise, efficient, and bimanual},
   journal = {International Journal of Human-Computer Studies},
