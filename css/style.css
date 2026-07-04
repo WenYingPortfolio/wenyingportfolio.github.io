@@ -202,15 +202,25 @@ a:hover {
 .bio-wrapper .org-icon,
 .exp-wrapper .exp-icon {
   width: auto;
-  height: 0.95em;
-  max-width: 1.1em;
+  height: 1.3em;
+  max-width: 1.45em;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .bio-wrapper .org-icon {
-  vertical-align: -0.12em;
-  margin-right: 3px;
+  vertical-align: -0.18em;
+  margin-right: 4px;
+}
+
+.exp-wrapper .exp-icon.uva-icon {
+  height: 2.6em;
+  max-width: 2.9em;
+}
+
+.exp-wrapper .exp-icon.zju-icon {
+  height: 1.95em;
+  max-width: 2.18em;
 }
 
 /*------------------
@@ -374,7 +384,7 @@ a:hover {
 .exp-wrapper .title {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 @media (max-width: 767.98px) {
