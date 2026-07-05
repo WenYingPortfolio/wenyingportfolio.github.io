@@ -467,6 +467,12 @@ a:hover {
   color: var(--dark-gray);
 }
 
+.project-page .project-authors sup,
+.project-page .project-affiliation sup {
+  font-size: 0.65em;
+  margin-left: 1px;
+}
+
 .project-page .project-links {
   margin-top: 22px;
 }
@@ -502,6 +508,43 @@ a:hover {
   border: 1px solid var(--very-light-gray);
 }
 
+.project-page .project-figure-group {
+  border: 1px solid var(--very-light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.project-page .project-figure-group .project-figure {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.project-page .project-figure-group .project-figure:first-child {
+  padding: 12px 16px 0;
+}
+
+.project-page .project-figure-group .project-figure + .project-figure {
+  border-top: 1px solid var(--very-light-gray);
+  padding: 12px 16px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.project-page .project-bimanual-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-page .project-bimanual-col .project-bimanual-summary {
+  margin-top: auto;
+}
+
 .project-page .project-caption {
   margin-top: 8px;
   color: var(--dark-gray);
@@ -533,6 +576,14 @@ a:hover {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.project-page .project-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .project-page .project-card {
@@ -606,6 +657,7 @@ a:hover {
 .project-page .project-tracing-col .project-figure + .project-figure,
 .project-page .project-tracing-col .project-figure + .project-copy,
 .project-page .project-tracing-col .project-copy + .project-figure,
+.project-page .project-tracing-col .project-copy + .project-figure-group,
 .project-page .project-tracing-col .project-caption + .project-figure {
   margin-top: 16px;
 }
@@ -624,6 +676,48 @@ a:hover {
 
 .project-page #citation a[data-bs-toggle="collapse"]:hover {
   color: var(--bright-cyan);
+}
+
+.project-page .project-collapse-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-page .project-collapse-title a:hover {
+  color: var(--cardinal);
+}
+
+.project-page .project-collapse-icon {
+  font-size: 0.85em;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.project-page .project-collapse-title a[aria-expanded="true"] .project-collapse-icon {
+  transform: rotate(180deg);
+}
+
+.project-page .project-detail-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: var(--dark-cyan);
+  font-size: var(--font-size);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-page .project-detail-toggle:hover {
+  color: var(--bright-cyan);
+}
+
+.project-page .project-detail-toggle[aria-expanded="true"] .project-collapse-icon {
+  transform: rotate(180deg);
+}
+
+.project-page .project-detail-collapse {
+  margin-top: 16px;
 }
 
 @media (max-width: 767.98px) {

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Project page for HandPad: A Bimanual Hand Interface for Fluid Window Interactions in VR.">
+  <meta name="author" content="Wen Ying">
+  <meta name="keywords" content="HandPad,Virtual Reality,Bimanual Interaction,Input Remapping,Gestures,Productivity,Wen Ying">
+
+  <title>HandPad: Bimanual Window Interaction in VR</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="../../css/style.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+</head>
+
+<body class="project-page handpad-page">
+  <div class="container-fluid">
+    <nav class="project-nav col-wrapper">
+      <a href="../../">Wen Ying</a>
+      <span>/</span>
+      <span>HandPad</span>
+    </nav>
+
+    <header class="project-hero sec-wrapper">
+      <div class="row justify-content-center">
+        <div class="col col-wrapper text-center">
+          <div class="project-venue">arXiv preprint, 2026</div>
+          <h1>HandPad: A Bimanual Hand Interface for Fluid Window Interactions in VR</h1>
+          <div class="project-authors">
+            <a href="../../">Wen Ying</a><sup>1</sup>,
+            <a href="https://adildsw.com/">Adil Rahman</a><sup>1</sup>,
+            <a href="https://erzhenh.com/">Erzhen Hu</a><sup>1</sup>,
+            and
+            <a href="https://seongkookheo.com/">Seongkook Heo</a><sup>2</sup>
+          </div>
+          <div class="project-affiliation"><sup>1</sup>University of Virginia and <sup>2</sup>UNIST</div>
+          <div class="project-links">
+            <a class="project-button" href="../../assets/HandPad/HandPad-arXiv.pdf"><i class="bi bi-file-earmark-pdf"></i>Paper</a>
+            <a class="project-button" href="#video"><i class="bi bi-play-btn"></i>Video</a>
+            <a class="project-button" href="#result-highlights"><i class="bi bi-bar-chart-line"></i>Highlights</a>
+            <a class="project-button" href="#citation" id="project-bibtex-trigger"><i class="bi bi-blockquote-left"></i>Citation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec-wrapper">
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <img class="project-teaser" src="../../assets/HandPad/HandPad_Teaser_v2.png" alt="HandPad non-dominant hand modes for VR window interaction">
+            <p class="project-caption">HandPad uses the non-dominant hand to establish spatial frames and interaction contexts while the dominant hand performs fine-grained window manipulation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Abstract</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              Virtual Reality offers potential for productivity work by creating expansive displays anywhere, yet current systems often rely on external input devices that limit on-the-go mobile VR use.
+            </p>
+            <p>
+              We introduce <b>HandPad</b>, a suite of bare-hand interaction techniques that leverage asymmetric bimanual coordination and self-haptic support. The <b>non-dominant hand</b> establishes <b>spatial frames</b> and <b>interaction contexts</b>, while the <b>dominant hand</b> performs <b>fine-grained manipulation</b>.
+            </p>
+            <p>
+              The palm surface of the non-dominant hand serves as a physical touch surface, and both hands are spatially remapped to virtual windows for comfortable direct interaction. An exploratory study showed that HandPad enables efficient and ergonomic interaction for knowledge work in VR.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="video">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Video</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <div class="project-video">
+              <video controls playsinline preload="metadata">
+                <source src="../../assets/HandPad/HandPad_Video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">HandPad Design</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              HandPad treats the non-dominant hand as a mobile reference frame, a tangible touch surface, and a mode-switching input. This lets the dominant hand manipulate virtual windows through touch and mid-air gestures while both physical hands remain in a comfortable posture.
+            </p>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Non-Dominant Hand Gestures</h3>
+            <p class="project-copy project-lead">
+              The non-dominant hand switches the interaction context and anchors the virtual workspace.
+            </p>
+            <img class="project-figure" src="../../assets/HandPad/snap_gestures_v2.png" alt="HandPad non-dominant hand snap modes">
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Dominant Hand Gestures</h3>
+            <p class="project-copy project-lead">
+              The dominant hand combines on-palm touch with familiar mid-air gestures for precise manipulation.
+            </p>
+            <img class="project-figure" src="../../assets/HandPad/manpulation_gesture_v2.png" alt="Dominant hand manipulation gestures in HandPad">
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Touch and Gesture Detection</h3>
+            <p class="project-copy project-lead">
+              HandPad detects on-palm touch states and maps them to interaction gestures for direct window control.
+            </p>
+            <a class="project-detail-toggle" data-bs-toggle="collapse" href="#touch-gesture-detection" onclick="return false" aria-expanded="false" aria-controls="touch-gesture-detection">
+              View detection details
+              <i class="bi bi-chevron-down project-collapse-icon" aria-hidden="true"></i>
+            </a>
+            <div class="collapse project-detail-collapse" id="touch-gesture-detection">
+              <div class="project-copy">
+                <p>
+                  <b>Touch Detection & State Machine.</b> HandPad first tracks touch contact, dwell time, movement distance, and the number of active touch points. These signals classify each contact as touched, dwelling, or moving.
+                </p>
+                <p>
+                  <b>Gesture Recognition.</b> The system then maps touch-state sequences and touch-point counts to interaction gestures, including clicks, swipes or drags, two-finger scrolling, and thumb-index scale or rotate actions.
+                </p>
+              </div>
+              <img class="project-figure" src="../../assets/HandPad/touchstate.png" alt="HandPad touch state machine for detecting clicks, drags, scrolling, and scale or rotate gestures">
+              <p class="project-caption">The top layer detects touch states from contact, dwell, movement, and touch-point count. The bottom layer recognizes gestures by matching state sequences to clicks, swipes or drags, scrolling, and scale or rotate actions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Interaction Techniques</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <p class="project-copy project-lead">
+              Together, the two hands support cross-window workflows and lightweight shortcuts.
+            </p>
+            <img class="project-figure" src="../../assets/HandPad/draganddrop_v2.png" alt="HandPad drag-and-drop across windows">
+            <img class="project-figure" src="../../assets/HandPad/shortcut3.png" alt="HandPad temporary clipboard shortcuts on the fingers">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="result-highlights">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title project-highlights-title">Study Highlights</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">9</div>
+              <div>participants used HandPad in multi-window quiz and poster design scenarios.</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">7/9</div>
+              <div>participants found non-dominant hand mode gestures intuitive and easy to learn.</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">8/9</div>
+              <div>participants appreciated hand remapping for more ergonomic interaction.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <img class="project-figure" src="../../assets/HandPad/study_task3.png" alt="HandPad open-book quiz and poster design study scenarios">
+            <p class="project-caption">Participants completed productivity-oriented tasks using multiple VR windows: an open-book quiz and a poster design task.</p>
+          </div>
+        </div>
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h3 class="project-subsection-title">Usability</h3>
+          </div>
+        </div>
+        <div class="row section-item align-items-center">
+          <div class="col-md-6 col-wrapper">
+            <img class="project-figure" src="../../assets/HandPad/interaction_2.png" alt="HandPad ease-of-use ratings for interaction techniques">
+          </div>
+          <div class="col-md-6 col-wrapper project-copy">
+            <p>
+              Participants rated interaction-window resizing and locating positively, and they generally found scrolling and multi-touch content manipulation useful for productivity tasks.
+            </p>
+            <p>
+              Window rotation was more difficult because free hand motion introduced many degrees of freedom, suggesting that future systems may benefit from constraints such as axis locking or stabilization.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Takeaways</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <ul>
+              <li>HandPad shows how a bare hand can become both an <b>input device</b> and a <b>spatial reference frame</b>.</li>
+              <li>Participants described the <b>non-dominant palm</b> as feeling like a <b>touchpad</b> or touchscreen, making sustained interactions such as scrolling, dragging, and multi-touch manipulation more stable than pure mid-air input.</li>
+              <li><b>Hybrid input</b> is important: <b>hand-surface interaction</b> supports precision and control, while <b>mid-air gestures</b> remain useful for quick lightweight actions around the active interaction area.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="citation">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Citation</h2>
+            <a data-bs-toggle="collapse" href="#project-bibtex" onclick="return false">BibTeX</a>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <div class="collapse" id="project-bibtex">
+              <pre class="snippet"><code>@article{ying2026handpad,
+  title = {HandPad: A Bimanual Hand Interface for Fluid Window Interactions in VR},
+  author = {Ying, Wen and Rahman, Adil and Hu, Erzhen and Heo, Seongkook},
+  journal = {arXiv preprint},
+  year = {2026},
+  keywords = {Gestures, bimanual interaction, input remapping, virtual reality}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="citation col-wrapper">
+      <div class="text-muted">Copyright &copy; <span id="year"></span> Wen Ying</div>
+    </footer>
+  </div>
+</body>
+
+<script defer src="../../js/script.js"></script>
+
+</html>
