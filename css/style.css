@@ -552,6 +552,38 @@ a:hover {
   font-size: 15px;
 }
 
+.project-page .project-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 16px 0 8px;
+}
+
+.project-page .project-result-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.project-page .project-result-table th,
+.project-page .project-result-table td {
+  padding: 8px 10px;
+  border: 1px solid var(--very-light-gray);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.project-page .project-result-table th {
+  background-color: var(--very-light-orange);
+  font-weight: bold;
+}
+
+.project-page .project-result-table td:first-child,
+.project-page .project-result-table td:nth-child(2) {
+  font-weight: bold;
+}
+
 .project-page .project-copy p:last-child,
 .project-page .project-copy ul:last-child {
   margin-bottom: 0;
@@ -656,6 +688,7 @@ a:hover {
 
 .project-page .project-tracing-col .project-figure + .project-figure,
 .project-page .project-tracing-col .project-figure + .project-copy,
+.project-page .project-tracing-col .project-figure + .row,
 .project-page .project-tracing-col .project-copy + .project-figure,
 .project-page .project-tracing-col .project-copy + .project-figure-group,
 .project-page .project-tracing-col .project-caption + .project-figure {

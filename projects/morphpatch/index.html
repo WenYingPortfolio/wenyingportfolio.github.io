@@ -78,10 +78,10 @@
               On-surface interaction in Virtual Reality improves input performance through physical support and tactile feedback, but current shape displays are constrained by limited resolution. This can misalign physical and virtual surfaces, degrading usability and user experience.
             </p>
             <p>
-              We present <b>MorphPatch</b>, a system that enables real-time alignment between a dynamic shape display and virtual surfaces. MorphPatch uses a Signed Distance Field-based surface approximation pipeline to find practical alignments for diverse geometries.
+              We present <b>MorphPatch</b>, a system that enables real-time alignment between a dynamic shape display and virtual surfaces. MorphPatch uses a Signed Distance Field-based <b>surface approximation pipeline</b> to find practical alignments for diverse geometries.
             </p>
             <p>
-              For residual discrepancies, MorphPatch incorporates pen redirection with visuo-haptic illusion to perceptually compensate for misalignment. Three evaluations show improved geometric alignment, tolerable redirection thresholds, and better control, surface guidance, and modeling results over mid-air and tablet-like interaction.
+              For residual discrepancies, MorphPatch incorporates <b>pen redirection</b> with <b>visuo-haptic illusion</b> to perceptually compensate for misalignment. Three evaluations show improved geometric alignment, tolerable redirection thresholds, and better control, surface guidance, and modeling results over mid-air and tablet-like interaction.
             </p>
           </div>
         </div>
@@ -113,24 +113,47 @@
         <div class="row section-item">
           <div class="col col-wrapper project-copy">
             <p>
-              MorphPatch supports on-surface interaction with diverse virtual objects using a low-resolution, kinematically constrained shape-changing device. The system combines VRScroll hardware, real-time surface approximation, and visuo-haptic pen redirection.
+              MorphPatch supports on-surface interaction with diverse virtual objects using a low-resolution, kinematically constrained shape-changing device. The system combines <b>VRScroll hardware</b>, real-time <b>surface approximation</b>, and <b>visuo-haptic pen redirection</b>.
             </p>
           </div>
         </div>
-        <div class="row section-item align-items-start">
-          <div class="col-md-6 col-wrapper project-tracing-col">
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">VRScroll Hardware</h3>
             <p class="project-copy project-lead">VRScroll provides a morphable physical proxy for virtual surfaces.</p>
-            <img class="project-figure" src="../../assets/MorphPatch/vrscroll_hardware_small.png" alt="VRScroll shape-changing device hardware">
-          </div>
-          <div class="col-md-6 col-wrapper project-tracing-col">
-            <p class="project-copy project-lead">Surface approximation aligns the proxy with local virtual geometry in real time.</p>
-            <img class="project-figure" src="../../assets/MorphPatch/Approximation_Config_Process_shorter.png" alt="MorphPatch surface approximation process">
+            <img class="project-figure" src="../../assets/MorphPatch/vrscroll_hardware.jpg" alt="VRScroll shape-changing device hardware">
           </div>
         </div>
         <div class="row section-item">
-          <div class="col col-wrapper">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Surface Approximation</h3>
+            <p class="project-copy project-lead">Surface approximation aligns the proxy with local virtual geometry in real time.</p>
+            <img class="project-figure" src="../../assets/MorphPatch/Approximation_Config_Process_shorter.png" alt="MorphPatch surface approximation process">
+            <div class="project-copy">
+              <p>
+                We evaluated surface approximation on <b>8 target geometries</b> using Mean Surface Distance (MSD) and Hausdorff Distance (HD). MorphPatch generally reduced approximation error compared with the collision-based simulation baseline, with the largest benefit on complex shapes such as stairs and curved stairs.
+              </p>
+              <img class="project-figure" src="../../assets/MorphPatch/shape_approximation_results.png" alt="Technical evaluation results of MorphPatch surface approximation">
+              <p class="project-caption">Technical evaluation results of surface approximation. MSD: Mean Surface Distance, HD: Hausdorff Distance. Units are in millimeters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Pen Redirection</h3>
+            <p class="project-copy project-lead">Pen redirection maps physical pen contact on VRScroll to the target virtual surface to compensate for residual shape mismatch.</p>
             <img class="project-figure" src="../../assets/MorphPatch/pen_redirection_v4.png" alt="MorphPatch pen redirection with visuo-haptic illusion">
-            <p class="project-caption">Pen redirection maps physical pen contact on VRScroll to the target virtual surface to compensate for residual shape mismatch.</p>
+            <p class="project-copy">
+              The perceptual studies measured when users noticed <b>positional</b> and <b>rotational redirection</b> while tracing curved and angled virtual surfaces.
+            </p>
+            <img class="project-figure" src="../../assets/MorphPatch/pen_redirection_dt_v2.png" alt="MorphPatch perceptual evaluation results for pen redirection">
+            <div class="project-copy">
+              <p>Results identified detection thresholds (DT) for pen redirection, helping MorphPatch preserve a natural pen-on-surface experience:</p>
+              <ul>
+                <li><b>Positional redirection:</b> up to <b>50 mm</b> (maximum tested; below DT)</li>
+                <li><b>Rotational redirection:</b> up to <b>64.87&deg;</b> (DT for concave angled surfaces)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -144,33 +167,28 @@
         <div class="row section-item">
           <div class="col-md-4 col-wrapper">
             <div class="project-metric">
-              <div class="project-metric-value">8</div>
-              <div>test geometries were used to evaluate surface approximation accuracy.</div>
+              <div class="project-metric-value">0.7154</div>
+              <div>MorphPatch achieved the highest median DINO similarity to the reference model.</div>
             </div>
           </div>
           <div class="col-md-4 col-wrapper">
             <div class="project-metric">
-              <div class="project-metric-value">50 mm</div>
-              <div>positional redirection remained below the detection threshold in the perceptual study.</div>
+              <div class="project-metric-value">4.5/5</div>
+              <div>was the median rating for MorphPatch surface reproduction in the creative task.</div>
             </div>
           </div>
           <div class="col-md-4 col-wrapper">
             <div class="project-metric">
-              <div class="project-metric-value">64.87&deg;</div>
-              <div>was selected as the conservative rotational redirection threshold.</div>
+              <div class="project-metric-value">6/12</div>
+              <div>participants preferred MorphPatch for realism and control.</div>
             </div>
           </div>
         </div>
-        <div class="row section-item align-items-center">
-          <div class="col-md-6 col-wrapper project-copy">
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col project-copy">
             <p>
-              MorphPatch was evaluated through three studies: a technical evaluation of surface approximation, two perceptual studies on pen redirection, and a comparative sculpting and sketching task.
+              In the final comparative user study, participants used <b>MorphPatch</b>, <b>Mid-Air</b>, and <b>Tablet</b> interaction to <b>sculpt</b> and <b>sketch</b> a toy bear with non-planar surfaces.
             </p>
-            <p>
-              In the creative task, participants used MorphPatch, Mid-Air, and Tablet interaction to sculpt and sketch a toy bear with non-planar surfaces.
-            </p>
-          </div>
-          <div class="col-md-6 col-wrapper">
             <img class="project-figure" src="../../assets/MorphPatch/sculpt_sketch_study_v2.png" alt="MorphPatch comparative study conditions for sculpting and sketching">
           </div>
         </div>
@@ -179,22 +197,27 @@
       <section class="sec-wrapper">
         <div class="row section-head">
           <div class="col col-wrapper">
-            <h2 class="section-title">Results</h2>
+            <h2 class="section-title">Creative Task Results</h2>
           </div>
         </div>
-        <div class="row section-item align-items-start">
-          <div class="col-md-6 col-wrapper project-tracing-col">
-            <p class="project-copy">
-              MorphPatch achieved the highest DINO similarity to the reference model, with a median score of <span class="project-stat">0.7154</span>, and reviewers ranked MorphPatch results best overall.
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              MorphPatch supported stronger curved-surface guidance and helped participants reproduce the reference model more closely. It achieved the highest DINO similarity to the reference model, with a median score of <span class="project-stat">0.7154</span>, and reviewers ranked MorphPatch results best overall.
             </p>
+          </div>
+        </div>
+        <div class="row section-item justify-content-center">
+          <div class="col-lg-10 col-wrapper">
             <img class="project-figure" src="../../assets/MorphPatch/bear_collection_v2.png" alt="MorphPatch sculpting and sketching result collection">
           </div>
-          <div class="col-md-6 col-wrapper project-tracing-col">
-            <p class="project-copy">
-              Participants rated MorphPatch highly for surface reproduction and valued the realism and control provided by the physical surface approximation.
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col project-copy">
+            <p>
+              Participants rated MorphPatch highly for surface reproduction and valued the realism and control provided by the physical surface approximation and pen redirection.
             </p>
             <img class="project-figure" src="../../assets/MorphPatch/sculpt_sketch_subjective_ratings.png" alt="MorphPatch subjective ratings for modeling results and usability">
-            <img class="project-figure" src="../../assets/MorphPatch/pen_redirection_dt_v2.png" alt="MorphPatch perceptual evaluation results for pen redirection">
           </div>
         </div>
       </section>
@@ -207,12 +230,11 @@
         </div>
         <div class="row section-item">
           <div class="col col-wrapper project-copy">
-            <p>
-              MorphPatch shows that perfect physical replication is not required for useful on-surface VR interaction. A practical approximation from a shape display, combined with visuo-haptic pen redirection, can provide enough physical guidance for precise creative work.
-            </p>
-            <p>
-              The results also clarify trade-offs between interaction styles: Mid-Air is flexible but tiring and less stable, Tablet interaction is familiar but flat, and MorphPatch provides curved-surface realism with stronger physical guidance.
-            </p>
+            <ul>
+              <li>MorphPatch shows that <b>perfect physical replication</b> is not required for useful on-surface VR interaction. A practical <b>surface approximation</b> from a shape display, combined with <b>visuo-haptic pen redirection</b>, can provide enough physical guidance for precise creative work.</li>
+              <li><b>Visuo-haptic pen redirection</b> can compensate for <b>residual mismatch</b> left after surface approximation. Our perceptual study found detection thresholds of up to <b>50 mm</b> for positional redirection and <b>64.87&deg;</b> for rotational redirection on concave angled surfaces, preserving a natural pen-on-surface experience despite imperfect physical replication.</li>
+              <li>The comparative study clarifies <b>trade-offs</b> between interaction modalities: <b>Mid-Air</b> interaction is flexible but tiring and less stable, <b>Tablet</b> interaction is familiar but flat, and <b>MorphPatch</b> provides curved-surface realism with stronger physical guidance.</li>
+            </ul>
           </div>
         </div>
       </section>
