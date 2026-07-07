@@ -299,19 +299,9 @@ a:hover {
   font-weight: bold;
 }
 
-.pub-wrapper .figure {
-  line-height: 0;
-}
-
-.pub-wrapper .figure a {
-  display: inline-block;
-}
-
 .pub-wrapper .figure img {
   max-width: 300px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
   border-radius: 10px; /* Add rounded corners */
 }
 
@@ -510,8 +500,6 @@ a:hover {
 .project-page .project-figure,
 .project-page .project-card img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
   border-radius: 12px;
 }
 
